@@ -1,0 +1,381 @@
+{
+  "info": {
+    "_postman_id": "34363484-cedd-4644-be69-6bba23c1bdcb",
+    "name": "FAKE_SERVER_LATAM_PASS_BR_BY_AFE",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33649144"
+  },
+  "item": [
+    {
+      "name": "Accumulation",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml"
+          },
+          {
+            "key": "client_id",
+            "value": "mock-client-id"
+          },
+          {
+            "key": "access_token",
+            "value": "mock-access-token"
+          },
+          {
+            "key": "Accept-Language",
+            "value": "*"
+          },
+          {
+            "key": "Accept",
+            "value": "application/xhtml+xml"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "*"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "Referer",
+            "value": "https://rappi.com.br"
+          },
+          {
+            "key": "Cookie",
+            "value": "rappi_partner_id=26900161000125"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:ebo=\"http://ebo.multiplusfidelidade.com.br/v1\" xmlns:ebs=\"http://ebs.multiplusfidelidade.com.br/v1\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soapenv:Header/>\n  <soapenv:Body>\n    <ebs:SubmeterLoteAcumuloInput>\n      <ebs:lote-acumulo>\n        <ebo:lote>\n          <ebo:id-externo-lote>mock-tx-123</ebo:id-externo-lote>\n          <ebo:tamanho-lote>1</ebo:tamanho-lote>\n        </ebo:lote>\n        <ebo:parceiro>\n          <ebo:dados-cadastrais-pj>\n            <ebo:cnpj>12345678000199</ebo:cnpj>\n          </ebo:dados-cadastrais-pj>\n        </ebo:parceiro>\n        <ebo:itens-lote>\n          <ebo:item-lote-acumulo>\n            <ebo:item-lote>\n              <ebo:id-externo-item-lote>mock-tx-123</ebo:id-externo-item-lote>\n            </ebo:item-lote>\n            <ebo:transacao-acumulo>\n              <ebo:total-transacao>\n                <ebo:pontos>100</ebo:pontos>\n              </ebo:total-transacao>\n              <ebo:data-hora-origem-transacao>2026-04-14T10:00:00</ebo:data-hora-origem-transacao>\n              <ebo:descricao-transacao>Mock accumulation</ebo:descricao-transacao>\n              <ebo:participante>\n                <ebo:numero-multiplus>99999999</ebo:numero-multiplus>\n              </ebo:participante>\n              <ebo:produto-fidelidade>\n                <ebo:id-produto>MOCK_PRODUCT</ebo:id-produto>\n              </ebo:producto-fidelidade>\n              <ebo:contexto-parceiro-transacao>\n                <ebo:id-transacao-parceiro>mock-tx</ebo:id-transacao-parceiro>\n              </ebo:contexto-parceiro-transacao>\n            </ebo:transacao-acumulo>\n          </ebo:item-lote-acumulo>\n        </ebo:itens-lote>\n        <ebo:canal>\n          <ebo:canal>\n            <ebo:valor-referencia>Integracao</ebo:valor-referencia>\n          </ebo:canal>\n          <ebo:subcanal>\n            <ebo:valor-referencia>Batch</ebo:valor-referencia>\n          </ebo:subcanal>\n        </ebo:canal>\n      </ebs:lote-acumulo>\n      <ebs:propriedades-execucao>\n        <ebo:id-interface>1</ebo:id-interface>\n      </ebs:propriedades-execucao>\n    </ebs:SubmeterLoteAcumuloInput>\n  </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9001/SubmeterLoteAcumuloAPISv1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9001",
+          "path": [
+            "SubmeterLoteAcumuloAPISv1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Accumulation Status",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml"
+          },
+          {
+            "key": "client_id",
+            "value": "mock-client-id"
+          },
+          {
+            "key": "access_token",
+            "value": "mock-access-token"
+          },
+          {
+            "key": "Accept-Language",
+            "value": "*"
+          },
+          {
+            "key": "Accept",
+            "value": "application/xhtml+xml"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "*"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "Referer",
+            "value": "https://rappi.com.br"
+          },
+          {
+            "key": "Cookie",
+            "value": "rappi_partner_id=26900161000125"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:ebo=\"http://ebo.multiplusfidelidade.com.br/v1\" xmlns:ebs=\"http://ebs.multiplusfidelidade.com.br/v1\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soapenv:Header/>\n  <soapenv:Body>\n    <ebs:SubmeterLoteAcumuloInput>\n      <ebs:lote-acumulo>\n        <ebo:lote>\n          <ebo:id-externo-lote>mock-tx-123</ebo:id-externo-lote>\n          <ebo:tamanho-lote>1</ebo:tamanho-lote>\n        </ebo:lote>\n        <ebo:parceiro>\n          <ebo:dados-cadastrais-pj>\n            <ebo:cnpj>12345678000199</ebo:cnpj>\n          </ebo:dados-cadastrais-pj>\n        </ebo:parceiro>\n        <ebo:itens-lote>\n          <ebo:item-lote-acumulo>\n            <ebo:item-lote>\n              <ebo:id-externo-item-lote>mock-tx-123</ebo:id-externo-item-lote>\n            </ebo:item-lote>\n            <ebo:transacao-acumulo>\n              <ebo:total-transacao>\n                <ebo:pontos>100</ebo:pontos>\n              </ebo:total-transacao>\n              <ebo:data-hora-origem-transacao>2026-04-14T10:00:00</ebo:data-hora-origem-transacao>\n              <ebo:descricao-transacao>Mock accumulation</ebo:descricao-transacao>\n              <ebo:participante>\n                <ebo:numero-multiplus>99999999</ebo:numero-multiplus>\n              </ebo:participante>\n              <ebo:produto-fidelidade>\n                <ebo:id-produto>MOCK_PRODUCT</ebo:id-produto>\n              </ebo:produto-fidelidade>\n              <ebo:contexto-parceiro-transacao>\n                <ebo:id-transacao-parceiro>mock-tx</ebo:id-transacao-parceiro>\n              </ebo:contexto-parceiro-transacao>\n            </ebo:transacao-acumulo>\n          </ebo:item-lote-acumulo>\n        </ebo:itens-lote>\n        <ebo:canal>\n          <ebo:canal>\n            <ebo:valor-referencia>Integracao</ebo:valor-referencia>\n          </ebo:canal>\n          <ebo:subcanal>\n            <ebo:valor-referencia>Batch</ebo:valor-referencia>\n          </ebo:subcanal>\n        </ebo:canal>\n      </ebs:lote-acumulo>\n      <ebs:propriedades-execucao>\n        <ebo:id-interface>1</ebo:id-interface>\n      </ebs:propriedades-execucao>\n    </ebs:SubmeterLoteAcumuloInput>\n  </soapenv:Body>\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9001/SubmeterLoteAcumuloAPISv1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9001",
+          "path": [
+            "SubmeterLoteAcumuloAPISv1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LOGIN",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9002/oauth/authorize?response_type=code&state=mock-code-verifier&client_id=mock-client-id&scope=mock-scope&redirect_uri=http://localhost/callback",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9002",
+          "path": [
+            "oauth",
+            "authorize"
+          ],
+          "query": [
+            {
+              "key": "response_type",
+              "value": "code"
+            },
+            {
+              "key": "state",
+              "value": "mock-code-verifier"
+            },
+            {
+              "key": "client_id",
+              "value": "mock-client-id"
+            },
+            {
+              "key": "scope",
+              "value": "mock-scope"
+            },
+            {
+              "key": "redirect_uri",
+              "value": "http://localhost/callback"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "EXCHANGE AUTH FOR TOKEN",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic bW9jay1jbGllbnQ6bW9jay1zZWNyZXQ="
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "type": "text",
+              "key": "grant_type",
+              "value": "authorization_code"
+            },
+            {
+              "type": "text",
+              "key": "code",
+              "value": "mock-auth-code"
+            },
+            {
+              "type": "text",
+              "key": "redirect_uri",
+              "value": "http://localhost/callback"
+            },
+            {
+              "type": "text",
+              "key": "client_id",
+              "value": "mock-client-id"
+            },
+            {
+              "type": "text",
+              "key": "client_secret",
+              "value": "mock-client-secret"
+            },
+            {
+              "type": "text",
+              "key": "scope",
+              "value": "mock-scope"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:9002/oauth/token",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9002",
+          "path": [
+            "oauth",
+            "token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "USR INFO",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer mock-redeem-token"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:9002/me",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9002",
+          "path": [
+            "me"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Extended USER INFO",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer mock-redeem-token"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:9002/programs/latam-pass/members/123456789",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9002",
+          "path": [
+            "programs",
+            "latam-pass",
+            "members",
+            "123456789"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "REDIMIR",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer mock-redeem-token"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"id\": \"tx-001\",\n    \"miles\": 1000,\n    \"description\": \"Mock redeem\",\n    \"productName\": \"Mock product\",\n    \"redemptionCode\": \"MOCK_CODE\",\n    \"sku\": \"MOCK_SKU\"\n  }\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9002/programs/LATAM_PASS/members/123456789/redeem",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9002",
+          "path": [
+            "programs",
+            "LATAM_PASS",
+            "members",
+            "123456789",
+            "redeem"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AKU TOKEN",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic bW9jay1jbGllbnQ6bW9jay1zZWNyZXQ="
+          },
+          {
+            "key": "client_id",
+            "value": "mock-client-id"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "type": "text",
+              "key": "grant_type",
+              "value": "client_credentials"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:9003/oauth/access-token",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "oauth",
+            "access-token"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
